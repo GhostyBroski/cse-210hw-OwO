@@ -33,11 +33,11 @@ class Program
 
         if (letter == "A")
         {
-            if (grade >= 93)
+            if (percent >= 93)
             {
                 letter = "A";
             }
-            if (grade <= 93)
+            if (percent <= 93)
             {
                 letter = "A-";
             }
