@@ -54,7 +54,7 @@ class Scripture
                 }
 
                 Console.Clear();
-                Console.WriteLine($"{GetReferenceText()}\n: {GetScriptureText()}");
+                Console.WriteLine($"{GetReferenceText()}: {GetScriptureText()}");
             }
             else
             {
