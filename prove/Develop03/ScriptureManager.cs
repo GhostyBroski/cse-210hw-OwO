@@ -14,16 +14,4 @@ class ScriptureManager
     {
         _scriptures.Add(scripture);
     }
-
-    public void DisplayScripture(int index)
-    {
-        if (index >= 0 && index < _scriptures.Count)
-        {
-            _scriptures[index].Display();
-        }
-        else
-        {
-            Console.WriteLine("Invalid index.");
-        }
-    }
 }

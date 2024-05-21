@@ -32,7 +32,7 @@ class Scripture
 
         while (true)
         {
-            Console.WriteLine("\nPress Enter to clear the console and replace one word with underscores, or type 'quit' to exit...");
+            Console.WriteLine("\nPress Enter to clear the console and replace three words with underscores, or type 'quit' to exit...");
             string input = Console.ReadLine().ToLower();
 
             if (input == "quit")
@@ -41,7 +41,7 @@ class Scripture
             }
             else if (input == "")
             {
-                ObscureRandomWord();
+                ObscureThreeRandomWords();
 
                 // Check if all words are obscured
                 if (_unobscuredWords.Count == 0)
@@ -54,7 +54,7 @@ class Scripture
                 }
 
                 Console.Clear();
-                Console.WriteLine($"{GetReferenceText()}: {GetScriptureText()}");
+                Console.WriteLine($"{GetReferenceText()}\n: {GetScriptureText()}");
             }
             else
             {
@@ -63,11 +63,11 @@ class Scripture
         }
     }
 
-    private void ObscureRandomWord()
+    private void ObscureThreeRandomWords()
     {
-        if (_unobscuredWords.Count > 0)
+        Random random = new Random();
+        for (int i = 0; i < 3 && _unobscuredWords.Count > 0; i++)
         {
-            Random random = new Random();
             int index = random.Next(_unobscuredWords.Count);
             _unobscuredWords[index].Obscure();
             _unobscuredWords.RemoveAt(index);

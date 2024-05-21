@@ -23,10 +23,6 @@ class Word
 
     public void Obscure()
     {
-        if (!_isObscured)
-        {
-            _word = new string('_', _word.Length);
-            _isObscured = true;
-        }
+        _isObscured = true;
     }
 }
