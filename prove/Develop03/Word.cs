@@ -16,13 +16,13 @@ class Word
         return _word;
     }
 
-    public bool IsObscured()
-    {
-        return _isObscured;
-    }
-
     public void Obscure()
     {
         _isObscured = true;
+    }
+
+    public bool IsObscured()
+    {
+        return _isObscured;
     }
 }
