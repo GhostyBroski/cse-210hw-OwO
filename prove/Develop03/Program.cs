@@ -32,8 +32,8 @@ class Program
 
         // Prompt user to select a scripture to display
         Console.WriteLine("Select a scripture to display:");
-        Console.WriteLine("1. John 3:16-17");
-        Console.WriteLine("2. Psalm 23:1-2");
+        Console.WriteLine($"1. John 3:16-17");
+        Console.WriteLine($"2. Psalm 23:1-2");
         Console.WriteLine("Enter the number of the scripture you want to display:");
         string choice = Console.ReadLine();
 
@@ -59,7 +59,7 @@ class Program
             // Wait for user input to clear the console and obscure words
             while (true)
             {
-                Console.WriteLine("\nPress Enter to clear the console and replace three words with underscores, or type 'quit' to exit...");
+                Console.WriteLine("\nPress enter to continue, or type 'quit' to finish:");
                 string input = Console.ReadLine().ToLower();
 
                 if (input == "quit")
@@ -72,7 +72,7 @@ class Program
                     if (!selectedScripture.ObscureRandomWords(3))
                     {
                         Console.WriteLine($"{selectedScripture.GetReferenceText()}\n{selectedScripture.GetScriptureText()}");
-                        Console.WriteLine("All words have been obscured. Press Enter to exit...");
+                        Console.WriteLine("All words have been obscured. Press enter to finish.");
                         Console.ReadLine();
                         break;
                     }
