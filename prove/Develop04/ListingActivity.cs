@@ -46,6 +46,5 @@ class ListingActivity : Activity
     public override void End()
     {
         base.End();
-        Console.WriteLine("Listing activity completed.");
     }
 }
