@@ -17,9 +17,9 @@ class BreathingActivity : Activity
         Stopwatch stopwatch = Stopwatch.StartNew();
         while (stopwatch.Elapsed.TotalSeconds < Duration)
         {
-            Console.WriteLine("Breathing in...");
+            Console.WriteLine("Breathe in...");
             Countdown(4);
-            Console.WriteLine("Breathing out...");
+            Console.WriteLine("Breathe out...");
             Countdown(4);
         }
         stopwatch.Stop();
