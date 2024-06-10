@@ -57,6 +57,6 @@ abstract class Activity
             Console.Write($"\r{i} ");
             Thread.Sleep(1000);
         }
-        Console.WriteLine();
+        Console.Write("\r   \r"); // Clear the line after countdown
     }
 }
