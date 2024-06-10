@@ -38,14 +38,14 @@ class ReflectionActivity : Activity
         {
             string prompt = Prompts[random.Next(Prompts.Length)];
             Console.WriteLine(prompt);
-            Thread.Sleep(5000); // Pause to reflect on the prompt
+            Thread.Sleep(5000);
 
             foreach (string question in Questions)
             {
                 if (stopwatch.Elapsed.TotalSeconds >= Duration) break;
                 Console.WriteLine(question);
-                ShowSpinner(); // Display spinner during the pause
-                Thread.Sleep(5000); // Pause to reflect on the question
+                ShowSpinner(); 
+                Thread.Sleep(5000);
             }
         }
         stopwatch.Stop();

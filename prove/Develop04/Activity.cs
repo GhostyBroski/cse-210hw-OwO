@@ -49,4 +49,14 @@ abstract class Activity
             }
         }
     }
+
+    protected void Countdown(int seconds)
+    {
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write($"\r{i} ");
+            Thread.Sleep(1000);
+        }
+        Console.WriteLine();
+    }
 }
