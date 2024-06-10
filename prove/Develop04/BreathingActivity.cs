@@ -4,7 +4,7 @@ using System.Threading;
 
 class BreathingActivity : Activity
 {
-    public BreathingActivity(int duration) : base(duration) { }
+    public BreathingActivity(int duration) : base(duration, "Breathing") { }
 
     public override void Introduce()
     {
@@ -23,10 +23,5 @@ class BreathingActivity : Activity
             Countdown(4);
         }
         stopwatch.Stop();
-    }
-
-    public override void End()
-    {
-        base.End();
     }
 }

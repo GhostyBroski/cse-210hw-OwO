@@ -5,19 +5,22 @@ using System.Threading;
 abstract class Activity
 {
     private int duration;
+    private string title;
 
-    protected Activity(int duration)
+    protected Activity(int duration, string title)
     {
         this.duration = duration;
+        this.title = title;
     }
 
     public int Duration => duration;
+    public string Title => title;
 
     public abstract void Introduce();
     public abstract void Start();
     public virtual void End()
     {
-        Console.WriteLine("Activity completed.");
+        Console.WriteLine($"{Title} activity completed.");
     }
 
     public void ShowSpinnerWithText(string text)
@@ -57,6 +60,6 @@ abstract class Activity
             Console.Write($"\r{i} ");
             Thread.Sleep(1000);
         }
-        Console.Write("\r   \r");
+        Console.Write("\r   \r"); 
     }
 }

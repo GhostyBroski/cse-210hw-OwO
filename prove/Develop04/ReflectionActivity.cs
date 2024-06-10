@@ -21,7 +21,7 @@ class ReflectionActivity : Activity
         "How can you apply what you learned to future situations?"
     };
 
-    public ReflectionActivity(int duration) : base(duration) { }
+    public ReflectionActivity(int duration) : base(duration, "Reflection") { }
 
     public override void Introduce()
     {
@@ -38,22 +38,17 @@ class ReflectionActivity : Activity
         {
             string prompt = Prompts[random.Next(Prompts.Length)];
             Console.WriteLine(prompt);
-            ShowSpinner();
-            Thread.Sleep(5000);
+            ShowSpinner(); 
+            Thread.Sleep(3000); 
 
             foreach (string question in Questions)
             {
                 if (stopwatch.Elapsed.TotalSeconds >= Duration) break;
                 Console.WriteLine(question);
-                ShowSpinner();
-                Thread.Sleep(5000);
+                ShowSpinner(); 
+                Thread.Sleep(3000); 
             }
         }
         stopwatch.Stop();
-    }
-
-    public override void End()
-    {
-        base.End();
     }
 }

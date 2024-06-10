@@ -13,7 +13,7 @@ class ListingActivity : Activity
         "Who are some of your personal heroes?"
     };
 
-    public ListingActivity(int duration) : base(duration) { }
+    public ListingActivity(int duration) : base(duration, "Listing") { }
 
     public override void Introduce()
     {
@@ -41,10 +41,5 @@ class ListingActivity : Activity
         stopwatch.Stop();
 
         Console.WriteLine($"You listed {itemCount} items.");
-    }
-
-    public override void End()
-    {
-        base.End();
     }
 }
