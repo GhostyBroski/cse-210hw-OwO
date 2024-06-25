@@ -1,0 +1,7 @@
+513500
+3
+2
+10
+SimpleGoal|Breathe in the right direction!|BREATHE YOU FIEND.|10000|True
+EternalGoal|Press buttons on the keyboard!|Press those silly doo-dads on the keyboard.|100
+ChecklistGoal|Do the entire show for Rix Stix performances.|Mentally perform the show 5 times.|500|500000|5|5|True

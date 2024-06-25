@@ -22,13 +22,17 @@ class ChecklistGoal : Goal
 
     public override int CompleteGoal()
     {
-        CurrentCount++;
-        if (CurrentCount == TargetCount)
+        if (!IsCompleted)
         {
-            IsCompleted = true;
-            return Points + BonusPoints;
+            CurrentCount++;
+            if (CurrentCount == TargetCount)
+            {
+                IsCompleted = true;
+                return Points + BonusPoints;
+            }
+            return Points;
         }
-        return Points;
+        return 0;
     }
 
     public override string DisplayGoal()
@@ -38,7 +42,7 @@ class ChecklistGoal : Goal
 
     public override int GetExperiencePoints()
     {
-        if (IsCompleted && CurrentCount == TargetCount)
+        if (!IsCompleted && CurrentCount == TargetCount)
         {
             return 5;
         }

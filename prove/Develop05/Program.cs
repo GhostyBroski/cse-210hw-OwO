@@ -16,15 +16,16 @@ class Program
         while (true)
         {
             Console.Clear();
-            Console.WriteLine($"Level: {level} {DisplayExperienceBar()}");
-            Console.WriteLine($"Total Score: {totalScore}");
-            Console.WriteLine("Menu:");
+            Console.WriteLine($"Level!: {level} {DisplayExperienceBar()}");
+            Console.WriteLine($"Your total score is: {totalScore}");
+            Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Create New Goal");
             Console.WriteLine("2. List Goals");
             Console.WriteLine("3. Save Goals");
             Console.WriteLine("4. Load Goals");
             Console.WriteLine("5. Record Event");
             Console.WriteLine("6. Quit");
+            Console.WriteLine("Select a choice from the menu: ");
 
             var choice = Console.ReadLine();
             switch (choice)
@@ -211,7 +212,6 @@ class Program
             totalScore += goal.CompleteGoal();
             GainExperience(goal.GetExperiencePoints());
 
-            // Ensure that eternal goals always add points to totalScore.
             if (goal is EternalGoal eternalGoal)
             {
                 totalScore += eternalGoal.Points;
