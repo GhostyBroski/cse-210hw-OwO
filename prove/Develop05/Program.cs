@@ -210,6 +210,12 @@ class Program
             var goal = goals[index];
             totalScore += goal.CompleteGoal();
             GainExperience(goal.GetExperiencePoints());
+
+            // Ensure that eternal goals always add points to totalScore.
+            if (goal is EternalGoal eternalGoal)
+            {
+                totalScore += eternalGoal.Points;
+            }
         }
         else
         {
