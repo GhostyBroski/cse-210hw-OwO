@@ -44,15 +44,15 @@ public class Program
         Address address1 = new Address("123 Main St", "Springfield", "IL", "USA");
         Address address2 = new Address("456 Elm St", "Shelbyville", "IN", "USA");
 
-        Customer customer1 = new Customer("John Doe", address1);
-        Customer customer2 = new Customer("Jane Smith", address2);
+        Customer customer1 = new Customer("John Jones", address1);
+        Customer customer2 = new Customer("Jane Livingstone", address2);
 
-        Product product1 = new Product("Widget A", "A001", 9.99m, 2);
-        Product product2 = new Product("Widget B", "B001", 19.99m, 1);
-        Product product3 = new Product("Widget C", "C001", 5.99m, 3);
+        Product product1 = new Product("Fidget Infinity Cube", "A001", 9.99m, 2);
+        Product product2 = new Product("Golden Grahams Cereal 128oz", "B001", 19.99m, 1);
+        Product product3 = new Product("Grand Size KitKat", "C001", 5.99m, 3);
 
-        Product product4 = new Product("Gadget X", "X001", 14.99m, 1);
-        Product product5 = new Product("Gadget Y", "Y001", 29.99m, 2);
+        Product product4 = new Product("Drink Tumbler", "X001", 14.99m, 1);
+        Product product5 = new Product("Ice Cream Maker", "Y001", 29.99m, 2);
 
         Order order1 = new Order(customer1);
         order1.AddItem(product1);

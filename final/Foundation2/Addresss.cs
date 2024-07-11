@@ -18,6 +18,6 @@ public class Address
     public bool IsInUSA() => country.ToLower() == "usa";
     public string GetAddressLabel()
     {
-        return $"{streetAddress}\n{city}, {stateProvince}\n{country}";
+        return $"{streetAddress} {city} {stateProvince} {country}";
     }
 }
