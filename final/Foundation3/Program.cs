@@ -1,9 +1,66 @@
 using System;
+using System.Collections.Generic;
 
 class Program
-{
-    static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation3 World!");
+        List<Event> Events = new List<Event>();
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.CreateSampleEvents();
+            program.Menu();
+        }
+
+        void CreateSampleEvents()
+        {
+            Address address1 = new Address("123 Main St", "Rexburg", "ID", "USA");
+            Address address2 = new Address("456 Elm St", "Provo", "UT", "USA");
+            Address address3 = new Address("789 Oak St", "Salt Lake City", "UT", "USA");
+
+            Lecture lecture = new Lecture("Lecture", "C# Programming", "A lecture on advanced C# programming.", address1, "2024-08-01", "10:00 AM", "John Doe", 100);
+            Reception reception = new Reception("Reception", "Wedding Reception", "A celebration of marriage.", address2, "2024-08-02", "6:00 PM", "rsvp@example.com");
+            Outdoor outdoor = new Outdoor("Outdoor", "Community Picnic", "A fun community picnic.", address3, "2024-08-03", "12:00 PM", "Sunny and warm");
+
+            Events.Add(lecture);
+            Events.Add(reception);
+            Events.Add(outdoor);
+        }
+
+        void Menu()
+        {
+            bool running = true;
+
+            while (running)
+            {
+                Console.WriteLine("\nMenu:");
+                Console.WriteLine("1. Display Events");
+                Console.WriteLine("2. Quit");
+                Console.Write("Choose an option: ");
+
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        Display();
+                        break;
+                    case "2":
+                        running = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice, please try again.");
+                        break;
+                }
+            }
+        }
+
+        void Display()
+        {
+            foreach (var eventItem in Events)
+            {
+                Console.WriteLine(eventItem.GetFullDetails());
+                Console.WriteLine();
+            }
+        }
     }
-}
