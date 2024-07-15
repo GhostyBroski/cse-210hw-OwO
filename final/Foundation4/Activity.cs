@@ -3,14 +3,17 @@ using System.Collections.Generic;
 
 class Activity
     {
-        protected string Date { get; set; }
-        protected double Minutes { get; set; }
+        private string date;
+        private double minutes;
 
         public Activity(string date, double minutes)
         {
-            Date = date;
-            Minutes = minutes;
+            this.date = date;
+            this.minutes = minutes;
         }
+
+        public string Date => date;
+        public double Minutes => minutes;
 
         public virtual double GetDistance()
         {

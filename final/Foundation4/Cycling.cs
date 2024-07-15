@@ -3,22 +3,22 @@ using System.Collections.Generic;
 
 class Cycling : Activity
     {
-        private double Speed { get; set; }
+        private double speed;
 
         public Cycling(string date, double minutes, double speed)
             : base(date, minutes)
         {
-            Speed = speed;
+            this.speed = speed;
         }
 
         public override double GetDistance()
         {
-            return (Speed / 60) * Minutes;
+            return (speed / 60) * Minutes;
         }
 
         public override double GetSpeed()
         {
-            return Speed;
+            return speed;
         }
 
         public override double GetPace()

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 class Swimming : Activity
     {
-        private uint Laps { get; set; }
+        private uint laps;
 
         public Swimming(string date, double minutes, uint laps)
             : base(date, minutes)
         {
-            Laps = laps;
+            this.laps = laps;
         }
 
         public override double GetDistance()
         {
-            return Laps * 50 / 1000.0 * 0.62;
+            return laps * 50 / 1000.0 * 0.62;
         }
 
         public override double GetSpeed()

@@ -3,27 +3,27 @@ using System.Collections.Generic;
 
 class Running : Activity
     {
-        private double Distance { get; set; }
+        private double distance;
 
         public Running(string date, double minutes, double distance)
             : base(date, minutes)
         {
-            Distance = distance;
+            this.distance = distance;
         }
 
         public override double GetDistance()
         {
-            return Distance;
+            return distance;
         }
 
         public override double GetSpeed()
         {
-            return (Distance / Minutes) * 60;
+            return (distance / Minutes) * 60;
         }
 
         public override double GetPace()
         {
-            return Minutes / Distance;
+            return Minutes / distance;
         }
 
         public override string GetSummary()
