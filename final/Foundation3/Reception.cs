@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 class Reception : Event
     {
-        public string ContactRSVP { get; set; }
+        private string ContactRSVP { get; set; }
 
         public Reception(string eventType, string title, string description, Address address, string date, string time, string contactRSVP)
             : base(eventType, title, description, address, date, time)
@@ -13,7 +13,7 @@ class Reception : Event
 
         public override string GetFullDetails()
         {
-            return $"{base.GetStandardDetails()}\nEvent Type: {EventType}\nRSVP Contact: {ContactRSVP}";
+            return $"{GetStandardDetails()}\nEventType: {EventType}\nRSVP Contact: {ContactRSVP}";
         }
 
         public override string GetShortDescription()

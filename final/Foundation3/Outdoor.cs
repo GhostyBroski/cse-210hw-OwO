@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 class Outdoor : Event
     {
-        public string WeatherStatement { get; set; }
+        private string WeatherStatement { get; set; }
 
         public Outdoor(string eventType, string title, string description, Address address, string date, string time, string weatherStatement)
             : base(eventType, title, description, address, date, time)
@@ -13,7 +13,7 @@ class Outdoor : Event
 
         public override string GetFullDetails()
         {
-            return $"{base.GetStandardDetails()}\nEvent Type: {EventType}\nWeather: {WeatherStatement}";
+            return $"{GetStandardDetails()}\nEventType: {EventType}\nWeather: {WeatherStatement}";
         }
 
         public override string GetShortDescription()

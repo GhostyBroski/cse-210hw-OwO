@@ -1,11 +1,12 @@
-
+using System;
+using System.Collections.Generic;
 
 class Address
     {
-        public string StreetAddress { get; set; }
-        public string City { get; set; }
-        public string StateProvince { get; set; }
-        public string Country { get; set; }
+        private string StreetAddress { get; set; }
+        private string City { get; set; }
+        private string StateProvince { get; set; }
+        private string Country { get; set; }
 
         public Address(string streetAddress, string city, string stateProvince, string country)
         {

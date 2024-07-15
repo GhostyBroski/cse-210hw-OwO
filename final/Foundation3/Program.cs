@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-class Program
+ class Program
     {
-        List<Event> Events = new List<Event>();
+        private List<Event> Events { get; set; } = new List<Event>();
 
         static void Main(string[] args)
         {
@@ -12,7 +12,7 @@ class Program
             program.Menu();
         }
 
-        void CreateSampleEvents()
+        private void CreateSampleEvents()
         {
             Address address1 = new Address("123 Main St", "Rexburg", "ID", "USA");
             Address address2 = new Address("456 Elm St", "Provo", "UT", "USA");
@@ -27,7 +27,7 @@ class Program
             Events.Add(outdoor);
         }
 
-        void Menu()
+        private void Menu()
         {
             bool running = true;
 
@@ -55,11 +55,10 @@ class Program
             }
         }
 
-        void Display()
+        private void Display()
         {
             foreach (var eventItem in Events)
             {
-                Console.WriteLine();
                 Console.WriteLine("Standard Details:");
                 Console.WriteLine(eventItem.GetStandardDetails());
                 Console.WriteLine();
@@ -70,6 +69,7 @@ class Program
 
                 Console.WriteLine("Short Description:");
                 Console.WriteLine(eventItem.GetShortDescription());
+                Console.WriteLine();
             }
         }
     }
