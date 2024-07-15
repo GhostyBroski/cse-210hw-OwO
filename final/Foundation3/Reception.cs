@@ -13,7 +13,7 @@ class Reception : Event
 
         public override string GetFullDetails()
         {
-            return $"{base.GetStandardDetails()}\nEventType: {EventType}\nRSVP Contact: {ContactRSVP}";
+            return $"{base.GetStandardDetails()}\nEvent Type: {EventType}\nRSVP Contact: {ContactRSVP}";
         }
 
         public override string GetShortDescription()

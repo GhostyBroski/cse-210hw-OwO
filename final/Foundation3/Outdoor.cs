@@ -13,7 +13,7 @@ class Outdoor : Event
 
         public override string GetFullDetails()
         {
-            return $"{base.GetStandardDetails()}\nEventType: {EventType}\nWeather: {WeatherStatement}";
+            return $"{base.GetStandardDetails()}\nEvent Type: {EventType}\nWeather: {WeatherStatement}";
         }
 
         public override string GetShortDescription()
